@@ -1,5 +1,6 @@
 Testlush::Application.routes.draw do
   get "hello_world/index"
+  get "hello_world/index2"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
