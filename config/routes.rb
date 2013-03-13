@@ -1,4 +1,7 @@
 Testlush::Application.routes.draw do
+  resources :users
+
+
   get "hello_world/index"
   get "hello_world/index2"
 
