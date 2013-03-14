@@ -1,0 +1,27 @@
+<h1>Listing kind_teachers</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Email</th>
+    <th>Comment</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @kind_teachers.each do |kind_teacher| %>
+  <tr>
+    <td><%= kind_teacher.name %></td>
+    <td><%= kind_teacher.email %></td>
+    <td><%= kind_teacher.comment %></td>
+    <td><%= link_to 'Show', kind_teacher %></td>
+    <td><%= link_to 'Edit', edit_kind_teacher_path(kind_teacher) %></td>
+    <td><%= link_to 'Destroy', kind_teacher, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Kind teacher', new_kind_teacher_path %>

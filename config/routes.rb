@@ -1,4 +1,7 @@
 Testlush::Application.routes.draw do
+  resources :kind_teachers
+
+
   resources :users
 
 
