@@ -1,5 +1,5 @@
-class AuthController < ApplicationController
-  def index
+class EventsController < ApplicationController
+  def add
     reset_session
     respond_to do |format|
       format.html
@@ -7,7 +7,7 @@ class AuthController < ApplicationController
     end    
   end
 
-  def login
+  def edit
     @email = User.find(params[:email])
     @passwd = User.find(params[:passwd])
     #execute auth
@@ -26,7 +26,12 @@ class AuthController < ApplicationController
 
   # GET /users/new
   # GET /users/new.json
-  def logout
+  def del
+    reset_session
+    redirect_to :action=>'index'
+  end
+
+  def get
     reset_session
     redirect_to :action=>'index'
   end
